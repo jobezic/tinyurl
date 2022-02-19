@@ -1,6 +1,9 @@
 const Express = require('express');
 const app = Express();
 require('dotenv').config({ path: 'config/.env' });
+const connectDB = require('../config/db');
+
+connectDB();
 
 app.use(Express.urlencoded({ extended: true }));
 app.use(Express.json());
