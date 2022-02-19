@@ -9,6 +9,7 @@ app.use(Express.urlencoded({ extended: true }));
 app.use(Express.json());
 
 app.use('/api', require('./routes/urls'));
+app.use('/', require('./routes/index'));
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
