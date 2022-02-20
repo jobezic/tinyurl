@@ -55,8 +55,19 @@ docker-compose up
 
 The service is listening for request on port 3000.
 
+## How to run tests
+To run tests you need mongodb running:
+```
+docker-compose up mongo
+```
+
+Then execute:
+```
+docker-compose run web npm test
+```
+
 ## TODO
-- implement unit tests
+- improve unit tests
 - production-ready
 
 ## Microservice architecture
